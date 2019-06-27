@@ -67,6 +67,26 @@ while(true){
       s = patchZero(s);
       var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
       alert(time);
+      break;
+    case '3':
+    case '笑话':
+      // 笑话数组
+      var jokes = [
+        '笑话1',
+        '笑话2',
+        '笑话3',
+        '笑话4',
+        '笑话5',
+        '笑话6',
+      ];
+      // 随机索引
+      var index= Math.floor(Math.random() * jokes.length);
+      alert(jokes[index]);
+      break;
+    default:
+      // 如果输入的没有上述的判断，就提示我不会
+      alert('我听不明白');
+      break;
   }
 }
 
