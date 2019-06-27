@@ -56,6 +56,15 @@
     return sum;
   }
 
+  // 把处理输入1的逻辑，也可以封装成函数，可以把代码简化
+  function inputOne() {
+    var numbers = prompt('请输入用逗号分隔的数字');
+    // 切割
+    var arr = numbers.split(',');
+    var sum = getSumFromArray(arr);
+    return sum;
+  }
+
 
   // 循环的弹窗输入 - while循环
   while (true) {
@@ -70,10 +79,7 @@
     switch (msg) {
       case '1':
       case '总和':
-        var numbers = prompt('请输入用逗号分隔的数字');
-        // 切割
-        var arr = numbers.split(',');
-        var sum = getSumFromArray(arr);
+        var sum = inputOne();
         alert(sum);
         break;
       case '2':
